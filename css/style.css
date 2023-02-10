@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100vh;
+
+    background-color: #e5e5e5;
+}
+header{
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    background-color: orange;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 30px;
+
+}
+header div {
+    display: flex;
+    align-items: center;
+    margin: 0 30px;
+    height: 100px;
+}
+header img{
+    width: 100px;
+    height: 100px;
+    background: ghostwhite;
+    
+    border-radius: 50%;
+    object-fit: cover;
+}
+header p{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-left: 2px solid floralwhite;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+header .icon-social{
+    width: 150px;
+    justify-content: space-evenly;
+}
+header #menu{
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    width: 60px;
+    height: 50px;
+    font-size: 18px;
+    position: relative;
+}
+header #menu ion-icon{
+    font-size: 50px;
+}
+header #menu ul{
+    background-color: darkorange;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    display: none;
+}
+#menu a{
+    text-decoration: none;
+}
+header #menu ul li{
+    border: 1px solid #262626;
+    color: ghostwhite;
+}
+header #menu ul li:hover{
+    background-color: ghostwhite;
+    color: darkorange;
+}
+
+main{
+    width: 100%;
+}
+main div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main .background{
+    width: 100%;
+    height: 700px;
+    background-image: url(/assets/background-working.jpg);
+    background-size: cover;
+    background-position: center;
+}
+main .logo{
+    width: 200px;
+    margin-top: 11%;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+}
+main article{
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-size: 35px;
+    text-align: center;
+    font-weight: 700;
+    margin: 15px 0;
+}
+h2{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    width: 80%;
+    margin-bottom: 15px;
+    text-align: justify;
+
+}
+button{
+    font-size: 18px;
+}
+input{
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+}
+ion-icon:hover{
+    cursor: pointer;
+}
+main .contato{
+    background-color: darkgrey;
+}
+main .contato h2{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+main .contato > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: inherit;
+    height: 400px;
+    margin-bottom: 50px;
+}
+.contato .logo{
+    margin-top: 5%;
+}
+.contato .inputs{
+    width: 80%;
+    height: 300px;
+    color: #fff;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    background-image: linear-gradient(45deg, black, transparent)
+}
+.contato .inputs .nome-email{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.contato .inputs .nome-email input {
+    height: 50px;
+}
+.contato .inputs textarea{
+    width: 80%;
+
+    border: none;
+    word-break: normal;
+    overflow: hidden;
+    outline: none;
+    resize: none;
+}
+.contato .inputs button {
+    width: 100px;
+    height: 35px;
+    margin-top: 10px;
+    border-radius: 15px;
+    border: none;
+}
+input::-webkit-input-placeholder{
+    font-style: italic;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #000000;
+}
+textarea::-webkit-input-placeholder{
+    font-style: italic;
+
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #000000;
+}
+.cadastro-login{
+    width: 100%;
+}
+.cadastro, .login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    gap: 15px;
+}
+.cadastro input, .login input{
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+}
+.cadastro button, .login button{
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+}
+.cadastro #cadastrar{
+    background-color: darkgrey;
+}
+.cadastro #fazer-login, #login{
+    background-color: dimgray;
+    color:aliceblue
+}
+footer{
+    margin-top: 100px;
+}
+footer article{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+footer article img{
+    width: 150px;
+}
+footer .assinatura{
+    background-color: orange;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 21px;
+    height: 50px;
+}
+footer .assinatura img{
+    width: 50px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    margin: 5px;
+}

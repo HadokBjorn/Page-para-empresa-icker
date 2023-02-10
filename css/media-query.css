@@ -1,0 +1,57 @@
+@media (min-width: 320px) {
+    header{
+        flex-direction: column;
+        height: auto;
+    }
+    header div{
+        justify-content: start;
+    }
+    .icons-menu{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .contato .inputs .nome-email{
+        flex-direction: column;
+    }
+    .contato .inputs .nome-email input{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .contato .inputs{
+        height: auto;
+    }
+    .contato .inputs textarea{
+        height: 200px;
+    }
+    .contato .inputs button{
+        margin-bottom: 10px;
+    }
+    .cadastro, .login{
+        width: 100%;
+    }
+    footer .assinatura{
+        text-align: center;
+    }
+}
+@media (min-width: 768px) {
+    header{
+        flex-direction: row;
+        height: 120px;
+    }
+    header div{
+        justify-content: normal;
+    }
+    .icons-menu{
+        justify-content: flex-end;
+        width: auto;
+    }
+}
+@media (min-width: 1024px) {
+    .contato .inputs .nome-email{
+        flex-direction: row;
+    }
+    .contato .inputs .nome-email input{
+        width: 45%;
+        margin-bottom: 5px;
+    }
+}
