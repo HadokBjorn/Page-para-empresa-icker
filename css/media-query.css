@@ -1,10 +1,35 @@
 @media (min-width: 320px) {
-    header{
+    /* header{
         flex-direction: column;
         height: auto;
+        width: 100%;
+    } */
+    header{
+        position: absolute;
+        top: 0;
+        z-index: 3;
+        width: 100%;
+        background-color: orange;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+        font-style: normal;
+        line-height: 30px;
     }
     header div{
         justify-content: start;
+        margin: 0;
+        height: auto;
+        width: 100%;
+        padding: 0 25px;
+    }
+    main .background {
+        height: 470px;
     }
     main .about-us, main .contato, .cadastro-login{
         flex-direction: column;
