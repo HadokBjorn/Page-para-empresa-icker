@@ -6,28 +6,124 @@
     header div{
         justify-content: start;
     }
+    main .about-us, main .contato, .cadastro-login{
+        flex-direction: column;
+    }
+    
+    main .about-us{
+        height: auto;
+    }
+    main .about-us img, #img-contato, .inputs img, .cadastro-login div img{
+        display: none;
+    }
+    #img-about-us{
+        width: 100px;
+        display: block;
+    }
+    main .text-about-us {
+        background-color: #fff;
+        background-image: url(/assets/sobre-nos.jpg);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: contain;
+        width: 100%;
+        box-shadow: inset 0 0 116px;
+    }
+    .servicos{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .servicos h2{
+        font-size: 20px;
+        height: 54px;
+        text-align: center;
+        /* background-color: rgba(137, 207, 175, 0.9); */
+        background-color: rgba(64, 95, 230, 0.5);
+        
+
+        border-radius: 50px;
+        padding: 0 15px;
+        
+        display: flex;
+        align-items: center;
+    }
+    main .text-about-us h2{
+        background-color: rgba(0, 0, 0, 0.5);
+        color: snow;
+        border-radius: 15px;
+        padding: 0 10px;
+    }
+    main .text-about-us h1{
+        background-color: rgba(64, 95, 230, 0.5);
+        border-radius: 15px;
+        padding: 0 10px;
+        color: #fff;
+    }
+    main .contato h2{
+        background-color: rgba(0, 0, 0, 0.5);
+        color: snow;
+    }
+    main .contato .card-contact {
+        background-image: url(/assets/contact.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #fff;
+        width: 100%;
+        box-shadow: inset 0 0 20px;
+    }
+    main .contato .card-contact h2{
+        background-color: rgba(0, 0, 0, 0.5);
+        color: snow;
+        border-radius: 15px;
+        padding: 0 10px;
+    }
     .icons-menu{
         width: 100%;
         justify-content: space-between;
     }
-    .contato .inputs .nome-email{
+    .inputs .nome-email{
         flex-direction: column;
     }
-    .contato .inputs .nome-email input{
+    .inputs .nome-email input, textarea{
         width: 100%;
         margin-bottom: 5px;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #fff;
     }
-    .contato .inputs{
+    input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
+        color: #fff;
+    }
+    .inputs{
         height: auto;
+        flex-direction: column;
     }
-    .contato .inputs textarea{
+    .inputs .support {
+        width: 100%;
+
+        background-image: url(/assets/support.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        box-shadow: none;
+    }
+    .inputs textarea{
         height: 200px;
     }
-    .contato .inputs button{
+    .inputs button{
         margin-bottom: 10px;
     }
     .cadastro, .login{
         width: 100%;
+
+        background-image: url(/assets/register.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .cadastro input, .login input {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #fff;
     }
     footer .assinatura{
         text-align: center;
@@ -47,11 +143,67 @@
     }
 }
 @media (min-width: 1024px) {
-    .contato .inputs .nome-email{
+    #img-contato, .inputs img, .cadastro-login div img{
+        display: flex;
+    }
+    main .about-us, main .contato, .cadastro-login {
         flex-direction: row;
     }
-    .contato .inputs .nome-email input{
-        width: 45%;
+    .cadastro-login{
+        height: 500px;
+    }
+    main .about-us{
+        flex-direction: row;
+    }
+    main .about-us img{
+        width: 50%;
+    }
+    main .contato .card-contact{
+        width: 50%;
+        height: 100%;
+        box-shadow: inset 0 0 20px;
+        background-color: aquamarine;
+        background-image: linear-gradient(45deg, darkgray, transparent);
+    }
+    .servicos h2{
+        font-size: 34px;
+        height: 100px;
+    }
+    main .contato img{
+        width: 50%;
+    }
+    main .contato > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+    }
+    .inputs{
+        flex-direction: row;
+        height: 570px;
+    }
+    .inputs div{
+        width: 50%;
+        height: 100%;
+    }
+    .inputs div img{
+        width: 100%;
+        object-fit: cover;
+    }
+    .inputs .support {
+        width: 50%;
+        box-shadow: inset 0 0 20px;
+        background-image: linear-gradient(45deg, darkgray, transparent);
+    }
+    .inputs .nome-email input{
+        width: 100%;
         margin-bottom: 5px;
+    }
+    .cadastro, .login{
+        width: 50%;
+        height: inherit;
+        background-color: aquamarine;
+        background-image: linear-gradient(45deg, darkgray, transparent);
     }
 }

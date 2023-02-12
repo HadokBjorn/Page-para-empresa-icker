@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/media-query.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Icker Criação de Projetos</title>
 </head>
 <body>
@@ -40,72 +41,94 @@
             <div class="background">
                 <img class="logo" src="./assets/logo-icker-transparent.png" />
             </div>
-            <article>
-                <h1>Sobre Nós</h1>
-                <h2>
-                    <p>
-                        Somos a Icker, uma empresa especializada em criação e desenvolvimento de projetos voltados para web, com profissionais altamente especialidos em python, java, javascript, C#, ruby, flutter, saphire e react.
-                    </p>
-                    
-                    <p>
-                        Fazemos todos os tipos de projetos, em especial sites institucionais, e de serviços em geral.
-                    </p>
-                    <p>
-                        Estamos no mercado desde 1993 e, por isso, somos uma das empresas de desenvolvimento web mais tradicionais da cidade de São Paulo.
-                    </p>
-                    
-                    <p>
-                        Estamos localizados na Avenida Paulista, onde gerenciamos a produção de nossos produtos para atender aos clientes localizados em todas as regiões do Brasil.
-                    </p>
-                    
-                    <p>
-                        Nossos serviços são diferenciados, pois utilizamos as melhores ferramentas do mercado, com excelente profissionais e um atendimento de qualidade.
-                    </p>
-                    
-                    <p>
-                        Nossa equipe, principalmente os desenvolvedores, é especializada em desenvolvimento de sites e aplicações aprimoradas pela nossa equipe ao longo de mais de 30 anos de história.
-                    </p>
-                    
-                    <p>
-                        Nosso objetivo é oferecer para você uma plataforma para ampliar o seu trabalho, projeto ou empresa trazendo atendimento virtual para os seus clientes.
-                    </p>
-                    
-                </h2>
+            <article class="about-us">
+                <div class="text-about-us animate__animated animate__fadeInDownBig">
+                    <img id="img-about-us" src="./assets/logo-Icker-letter.png"/>
+                    <h1>Sobre Nós</h1>
+                    <h2>
+                        <p>
+                            Somos a Icker, uma empresa especializada em criação e desenvolvimento de projetos voltados para web, com profissionais altamente especialidos em python, java, javascript, C#, ruby, flutter, saphire e react.
+                        </p>
+                        
+                        <p>
+                            Fazemos todos os tipos de projetos, em especial sites institucionais, e de serviços em geral.
+                        </p>
+                        <p>
+                            Estamos no mercado desde 1993 e, por isso, somos uma das empresas de desenvolvimento web mais tradicionais da cidade de São Paulo.
+                        </p>
+                        
+                        <p>
+                            Estamos localizados na Avenida Paulista, onde gerenciamos a produção de nossos produtos para atender aos clientes localizados em todas as regiões do Brasil.
+                        </p>
+                        
+                        <p>
+                            Nossos serviços são diferenciados, pois utilizamos as melhores ferramentas do mercado, com excelente profissionais e um atendimento de qualidade.
+                        </p>
+                        
+                        <p>
+                            Nossa equipe, principalmente os desenvolvedores, é especializada em desenvolvimento de sites e aplicações aprimoradas pela nossa equipe ao longo de mais de 30 anos de história.
+                        </p>
+                        
+                        <p>
+                            Nosso objetivo é oferecer para você uma plataforma para ampliar o seu trabalho, projeto ou empresa trazendo atendimento virtual para os seus clientes.
+                        </p>
+                    </h2>
+                </div>
+                <div class="servicos">
+                    <img class="animate__animated animate__bounceInLeft" src="./assets/sobre-nos.jpg"/>
+                    <img id="img-service" src="./assets/services.png" />
+                    <h2 class="animate__animated animate__backInRight">Desenvolvimento de Aplicações Web</h2>
+                    <h2 class="animate__animated animate__backInRight animate__delay-1s">Desenvolvimento de API'S</h2>
+                    <h2 class="animate__animated animate__backInRight animate__delay-2s">Arquitetura de Software</h2>
+                    <h2 class="animate__animated animate__backInRight animate__delay-3s">Criação de Design para seu negócio</h2>
+                    <h2 class="animate__animated animate__backInRight animate__delay-4s">Manutenção de Software</h2>
+                </div>
             </article>
         </a>
         <a name="contato">
             <article class="contato">
-                <div>
+                <div id="img-contato">
+                    <img src="./assets/contact.png"/>
+                </div>
+                <div class="card-contact">
                     <img class="logo" src="./assets/logo-icker-transparent.png" />
                     <h1>Contato</h1>
                     <h2>Telefone: (99) 98877-6655 ou 3223-3344</h2>
                     <h2>E-mail: icker.producao@gmail.com ou icker.dev@hotmail.com</h2>
                 </div>
-                <div class="inputs">
+            </article>
+            <article class="inputs">
+                <div class="support">
                     <h1>Assistência</h1>
                     <div class="nome-email">
                         <input type="text" placeholder="Nome"/>
-                        <input type="text" placeholder="E-mail"/>
+                        <input type="email" placeholder="E-mail"/>
                     </div>
                     <textarea placeholder="Descreva o que precisa"></textarea>
                     <button onclick="sendMessageSuport()">Enviar</button>
                 </div>
+                <div>
+                    <img src="./assets/support.png" />
+                </div>
             </article>
         </a>
         <article class="cadastro-login">
+            <div class="div-image">
+                <img src="./assets/register.png" />
+            </div>
             <div class="cadastro">
                 <h1><a name="cadastro">Cadastro</a></h1>
-                <input type="text" placeholder="Nome completo"/>
-                <input type="text" placeholder="E-mail"/>
-                <input type="text" placeholder="Telefone"/>
-                <input type="text" placeholder="Crie sua senha"/>
+                <input id="cadastro-nome" type="text" placeholder="Nome completo"/>
+                <input id="cadastro-email" type="email" placeholder="E-mail"/>
+                <input id="cadastro-telefone" type="tel" placeholder="Telefone"/>
+                <input id="cadastro-senha" type="password" placeholder="Crie sua senha"/>
                 <button id="cadastrar" onclick="cadastro()">Cadastrar</button>
                 <button id="fazer-login" onclick="login()">Login</button>
             </div>
         </article>
     </main>
     <footer>
-        <article>
+        <article class="rodape-image">
             <img src="./assets/logo-icker-transparent.png" />
             <div class="icon-social">
                 <ion-icon name="logo-facebook" onclick="goToFacebook()"></ion-icon>
@@ -116,7 +139,7 @@
         </article>
         <article class="assinatura">
             <img src="./assets/logo-Icker-letter.png" />
-            @2023 - Esaú Bandeira e Márcio Filho
+            @2023-Sisten-tech
             <img src="./assets/logo-Icker-letter.png" />
         </article>
     </footer>

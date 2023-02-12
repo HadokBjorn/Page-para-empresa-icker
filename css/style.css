@@ -5,7 +5,7 @@ body{
     width: 100%;
     height: 100vh;
 
-    background-color: #e5e5e5;
+    background-color: #fff;
 }
 header{
     position: fixed;
@@ -65,7 +65,7 @@ header #menu ion-icon{
 }
 header #menu ul{
     background-color: darkorange;
-    width: 100px;
+    width: 150px;
     position: absolute;
     right: 0;
     display: none;
@@ -75,6 +75,10 @@ header #menu ul{
 }
 header #menu ul li{
     border: 1px solid #262626;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: ghostwhite;
 }
 header #menu ul li:hover{
@@ -86,6 +90,7 @@ main{
     width: 100%;
 }
 main div{
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,21 +99,43 @@ main div{
 main .background{
     width: 100%;
     height: 700px;
-    background-image: url(/assets/background-working.jpg);
+    background-image: url(/assets/backgroun-ideia.jpg);
     background-size: cover;
     background-position: center;
 }
-main .logo{
+main .background .logo, main .card-contact .logo{
     width: 200px;
     margin-top: 11%;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 50%;
+}
+.servicos{
+    gap: 20px;
+}
+#img-service{
+    display: block;
+    width: 100px;
 }
 main article{
     width: inherit;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+main .text-about-us{
+    background-color: aquamarine;
+    box-shadow: inset 0 0 20px;
+}
+main .text-about-us img{
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+    background: ghostwhite;
+    
+    border-radius: 50%;
+    object-fit: cover;
 }
 h1{
     font-size: 35px;
@@ -129,15 +156,28 @@ button{
     font-size: 18px;
 }
 input{
+    padding:0 15px;
+    border-radius: 20px;
+    border: none;
     font-size: 18px;
     font-weight: 400;
     font-style: normal;
+}
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+    -moz-appearance: textfield;
+    appearance: textfield;
+
 }
 ion-icon:hover{
     cursor: pointer;
 }
 main .contato{
-    background-color: darkgrey;
+    flex-direction: row;
+    height: 500px;
 }
 main .contato h2{
     text-align: center;
@@ -146,51 +186,58 @@ main .contato h2{
     line-height: 30px;
     margin-bottom: 15px;
 }
-main .contato > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: inherit;
-    height: 400px;
-    margin-bottom: 50px;
-}
 .contato .logo{
     margin-top: 5%;
 }
-.contato .inputs{
-    width: 80%;
-    height: 300px;
-    color: #fff;
+.inputs{
+    width: 100%;
+    color: #262626;
     border-radius: 15px;
-    margin-bottom: 50px;
-    background-image: linear-gradient(45deg, black, transparent)
+    flex-direction: row;
+    background-color: #fff;
 }
-.contato .inputs .nome-email{
+.inputs img{
+    height: 100%;
+}
+.inputs .nome-email{
     width: 80%;
+    height: 25%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
 }
-.contato .inputs .nome-email input {
+.inputs .nome-email input {
     height: 50px;
 }
-.contato .inputs textarea{
+.inputs textarea{
     width: 80%;
+    padding: 15px;
 
     border: none;
+    border-radius: 10px;
     word-break: normal;
     overflow: hidden;
     outline: none;
     resize: none;
+
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
 }
-.contato .inputs button {
+.inputs button {
     width: 100px;
     height: 35px;
     margin-top: 10px;
     border-radius: 15px;
     border: none;
 }
+.inputs .support{
+    background-color: aquamarine;
+    box-shadow: inset 0 0 20px;
+}
+
 input::-webkit-input-placeholder{
     font-style: italic;
     font-family: 'Roboto';
@@ -218,12 +265,25 @@ textarea::-webkit-input-placeholder{
 }
 .cadastro-login{
     width: 100%;
+    flex-direction: row;
+}
+.cadastro-login .div-image{
+    width: 50%;
+    height: inherit;
+    background-color: #fff;
+}
+.cadastro-login div img{
+    height: 465px;
+}
+.cadastro{
+    background-color: aquamarine;
+    box-shadow: inset 0 0 20px;
+
 }
 .cadastro, .login{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 400px;
     gap: 15px;
 }
 .cadastro input, .login input{
@@ -243,21 +303,30 @@ textarea::-webkit-input-placeholder{
 }
 .cadastro #fazer-login, #login{
     background-color: dimgray;
-    color:aliceblue
-}
-footer{
-    margin-top: 100px;
+    color:aliceblue;
+    margin-bottom: 20px;
 }
 footer article{
-    height: 200px;
+    height: 300px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 30px;
 }
+.rodape-image{
+    background-image: url(/assets/backgroun-ideia.jpg);
+    background-size: cover;
+    background-position: right;
+}
 footer article img{
     width: 150px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+}
+footer div{
+    margin-left: 25px;
+    color: orange;
 }
 footer .assinatura{
     background-color: orange;
